@@ -1,0 +1,27 @@
+
+> recta-backend@0.5.0-beta start
+> node dist/index.js
+
+🔨 Building Fastify application...
+✅ Fastify instance created
+📋 Registering health check endpoint...
+✅ Health check endpoint registered at /health
+📡 Starting server on port 3001...
+   PORT env var: 3001
+   Using port: 3001
+
+🚀 Recta API is running!
+   
+   Port:       3001
+   Health:     http://0.0.0.0:3001/health
+   Swagger UI: http://0.0.0.0:3001/docs
+   Environment: development
+
+🔧 Initializing Firebase...
+✅ Firebase Admin initialized
+✅ Firebase initialized
+🔧 Connecting to database...
+[00:29:24 UTC] INFO: Server listening at http://0.0.0.0:3001
+prisma:query SET timezone = 'America/Sao_Paulo'
+✅ Database connected (timezone: UTC-3)
+✅ Database connected

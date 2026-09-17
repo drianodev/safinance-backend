@@ -3,3 +3,7 @@ dist
 src/generated
 
 .env
+.env.*
+*.local
+*service-account*.json
+firebase-service-account.json
