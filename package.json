@@ -6,8 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "prebuild": "npm run db:generate",
-    "build": "npm run db:generate && tsc",
+    "build": "prisma generate && node --max-old-space-size=450 ./node_modules/typescript/bin/tsc",
     "start": "node dist/index.js",
     "start:cron": "node dist/jobs/processRecurrences.js",
     "cron:process-recurrences": "node dist/jobs/processRecurrences.js",
