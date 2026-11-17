@@ -1,12 +1,12 @@
-# Recta Backend
+# Safinance Backend
 
-Backend for Recta — personal finance app with household collaboration. **Open source & self-hostable.**
+Backend for Safinance — personal finance app with household collaboration. **Open source & self-hostable.**
 
 ## About this project
 
-Recta is an open source personal finance manager. This repository is the public backend: **anyone can self-host it**, fork it, submit pull requests, or build on top of it. Submitting PRs or contributing does **not** guarantee that any feature or change will be incorporated into the hosted product at [recta.app](https://recta.app). The maintainers decide what is merged and what is shipped on recta.app.
+Safinance is a modern personal finance manager. This repository is the public backend: **anyone can self-host it**, fork it, submit pull requests, or build on top of it. Submitting PRs or contributing does **not** guarantee that any feature or change will be incorporated into the hosted product at [recta.app](https://recta.app). The maintainers decide what is merged and what is shipped on recta.app.
 
-This project is maintained by [PrimoDev](https://www.oprimo.dev).
+
 
 **Other part of the project:** [recta-selfhosted-frontend](https://github.com/oprimodev/recta-selfhosted-frontend) — web app (React/Vite).
 
