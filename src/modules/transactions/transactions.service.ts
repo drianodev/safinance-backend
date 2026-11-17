@@ -634,8 +634,8 @@ export async function listTransactions(query: ListTransactionsQuery) {
     ...(dateFilter && { date: dateFilter }),
     ...(search && {
       OR: [
-        { description: { contains: search, mode: 'insensitive' } },
-        { notes: { contains: search, mode: 'insensitive' } },
+        { description: { contains: search } as any },
+        { notes: { contains: search } as any },
         // Busca por valor numérico
         ...(search.match(/[\d.,]/) ? (() => {
           // Remove caracteres não numéricos exceto ponto e vírgula
