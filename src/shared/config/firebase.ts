@@ -3,6 +3,14 @@ import { env } from './env.js';
 
 let firebaseApp: admin.app.App | null = null;
 
+function formatPrivateKey(key: string): string {
+  let cleanKey = key.trim();
+  if ((cleanKey.startsWith('"') && cleanKey.endsWith('"')) || (cleanKey.startsWith("'") && cleanKey.endsWith("'"))) {
+    cleanKey = cleanKey.slice(1, -1);
+  }
+  return cleanKey.replace(/\\n/g, '\n');
+}
+
 /**
  * Initialize Firebase Admin SDK
  * Supports both credential file and individual environment variables
@@ -24,8 +32,7 @@ export function initializeFirebase(): admin.app.App {
         credential: admin.credential.cert({
           projectId: env.FIREBASE_PROJECT_ID!,
           clientEmail: env.FIREBASE_CLIENT_EMAIL!,
-          // Private key comes with escaped newlines, need to unescape
-          privateKey: env.FIREBASE_PRIVATE_KEY!.replace(/\\n/g, '\n'),
+          privateKey: formatPrivateKey(env.FIREBASE_PRIVATE_KEY!),
         }),
       });
     }

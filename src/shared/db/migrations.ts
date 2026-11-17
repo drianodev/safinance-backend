@@ -9,6 +9,11 @@ const execAsync = promisify(exec);
  * Automatically resolves failed migrations if they're safe to roll back
  */
 export async function runMigrations(): Promise<void> {
+  if (process.env.DATABASE_URL?.startsWith('mysql:') || process.env.DATABASE_URL?.startsWith('mariadb:')) {
+    console.log('🐬 MySQL/MariaDB detected: skipping PostgreSQL migrate deploy (schema synchronized via schema.mysql.prisma)');
+    return;
+  }
+
   try {
     console.log('🔄 Running database migrations...');
     
